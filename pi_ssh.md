@@ -16,3 +16,13 @@ Key steps were:
 - on Terminal: `cd /Documents/RPi_Cam_Web_Interface` 
 - `./start.sh` on one computer `./update.sh` might be needed beforehand
 - navigate to browser entering ip address
+
+5.25.21
+
+-how to control settings such as time lapse on rpi cam interface
+	-`timelapse start`, `timelapse stop`, starts/stops automated images
+	-'Camera settings' to modify lapse, intervals.
+	-seems to save to /var/www/html/media on pi
+
+
+
