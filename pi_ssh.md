@@ -25,4 +25,23 @@ Key steps were:
 	-seems to save to /var/www/html/media on pi
 
 
+06.08.21
+## testing presence of rtc on pi
+
+- timedatectl (will give error if rtc is not equipped)
+- useful link for setting RTC time on pi (https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)
+- link containing all the timedatectl commmands (https://www.freedesktop.org/software/systemd/man/timedatectl.html)
+- link containing instructions for ntp synchronization (https://domoticproject.com/keeping-raspberry-on-time-rtc-module/#DS3231_Module_Setup)
+
+-ntp synchronization:
+	`sudo service ntp stop`
+	`ntpd -gq`
+	`sudo service ntp start`
+-rtc synchronization with ntp
+	`sudo hwclock -w`
+	`sudo hwclock -r`
+	
+-useful link (http://www.intellamech.com/RaspberryPi-projects/rpi_RTCds3231#4) 
+	
+
 
