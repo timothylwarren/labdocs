@@ -19,10 +19,10 @@ Key steps were:
 
 5.25.21
 
--how to control settings such as time lapse on rpi cam interface
-	-`timelapse start`, `timelapse stop`, starts/stops automated images
-	-'Camera settings' to modify lapse, intervals.
-	-seems to save to /var/www/html/media on pi
+- how to control settings such as time lapse on rpi cam interface
+	- `timelapse start`, `timelapse stop`, starts/stops automated images
+	- 'Camera settings' to modify lapse, intervals.
+	- seems to save to /var/www/html/media on pi
 
 
 06.08.21
