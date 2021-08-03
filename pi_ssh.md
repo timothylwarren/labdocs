@@ -42,6 +42,19 @@ Key steps were:
 	`sudo hwclock -r`
 	
 -useful link (http://www.intellamech.com/RaspberryPi-projects/rpi_RTCds3231#4) 
-	
+
+
+
+## Starting virtual env for running python
+- we followed this link (https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
+
+- Key commands to activate and deactivate 
+	`source kei_project_env/bin/activate`
+	`deactivate`
+
+
+
+
+
 
 
