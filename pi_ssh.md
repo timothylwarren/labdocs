@@ -52,8 +52,13 @@ Key steps were:
 	`source kei_project_env/bin/activate`
 	`deactivate`
 
+## How to set up Python3 on new linux machine
+
+https://docs.python-guide.org/starting/install3/linux/
 
 
+`sudo apt-get update`
+$ sudo apt-get install python3.6
 
 
 
