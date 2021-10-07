@@ -56,11 +56,9 @@ Key steps were:
 
 https://docs.python-guide.org/starting/install3/linux/
 
-`python3 --version`
-`sudo apt-get update`
-`sudo apt-get install python3.6`
-
-
-
+-`python3 --version`
+-`sudo apt-get update`
+-`sudo apt-get install python3.6`
+-`pip install ipython` installs newest ipython that can be run with `ipython3` command
 
 
