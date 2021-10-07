@@ -56,9 +56,10 @@ Key steps were:
 
 https://docs.python-guide.org/starting/install3/linux/
 
-
+`python3 --version`
 `sudo apt-get update`
-$ sudo apt-get install python3.6
+`sudo apt-get install python3.6`
+
 
 
 
