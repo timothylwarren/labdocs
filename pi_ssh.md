@@ -51,6 +51,20 @@ Key steps were:
 - Key commands to activate and deactivate 
 	`source kei_project_env/bin/activate`
 	`deactivate`
+	
+- https://realpython.com/python-virtual-environments-a-primer/	
+
+Set up another virtual environment, wind_env, on lab laptop
+-Created wind_sensor_env directory and then from within that directory 'python3 -m venv wind_env' ,'
+then 'source wind_env/bin/activate'
+
+When activated `which python3` should point to location in virtual environment directory, not general python location
+
+Sudo privileges *should not* be necessary for installations within virtual environment
+
+## Permissions for reading usb file
+sudo chmod 777 '/dev/ttyACM0'
+
 
 ## How to set up Python3 on new linux machine
 
