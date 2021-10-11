@@ -35,7 +35,7 @@ Key steps were:
 06.08.21
 ## testing presence of rtc (real time clock) on pi
 
-- timedatectl (will give error if rtc is not equipped)
+- timedatectl #(will give error if rtc is not equipped)
 - useful link for setting RTC time on pi (https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)
 - link containing all the timedatectl commmands (https://www.freedesktop.org/software/systemd/man/timedatectl.html)
 - link containing instructions for ntp synchronization (https://domoticproject.com/keeping-raspberry-on-time-rtc-module/#DS3231_Module_Setup)
@@ -50,7 +50,26 @@ Key steps were:
 	
 -useful link (http://www.intellamech.com/RaspberryPi-projects/rpi_RTCds3231#4) 
 
+## Need to Update for setting time
 
+
+#set to Oregon time zone
+#click tab for advanced settings - Pacific new time
+#check this useful link (https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
+#check this useful link (https://forums.raspberrypi.com/viewtopic.php?t=101267)
+- sudo raspi-config
+- sudo reboot
+- sudo apt-get install -y i2c-tools 
+#maybe you don't have to run these three commands
+- sudo apt-get -y remove fake-hwclock
+- sudo update-rc.d -f fake-hwclock remove
+- sudo systemctl disable fake-hwclock
+
+- sudo nano /lib/udev/hwclock-set
+- sudo hwclock -r 
+#enter password for pi
+
+sudo nano /lib/udev/hwclock-set
 
 ## Starting virtual env for running python
 - we followed this link (https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
