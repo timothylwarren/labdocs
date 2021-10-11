@@ -4,15 +4,22 @@
 
 ## List of steps to connect pi from Ubuntu without internet
 
-Tim, Abheer 5.20.21
+Tim, Abheer, Cate, Kei 2021-10-11
 
 [link to helpful page](https://raspberrypi.stackexchange.com/questions/3867/ssh-to-rpi-without-a-network-connection)
 
+#Connect Pi to Ubuntu machine using ethernet cable
+#Connect power source to Pi
+#If you don't know the IP address of the Pi start here:
 Key steps were:
 - `sudo apt-get install dnsmasq-base`
 - `nm-connection-editor` then opens GUI, where you set up a new ethernet connection
 - Find ip of pi (not sure if we can do that reliably) `cat /var/lib/misc/dnsmasq.leases` worked on one linux machine but not the other
-- Then ssh pi@10.42.0.198 (password:raspberry)
+
+#Need to have only wired connection to Pi. Turn off connection to wireless and turn off airplane mode.
+#You may need to toggle Pi connection on and off to get stable connection.
+#If you know the Pi IP address use it and start here:
+- Then ssh pi@10.42.0.198 (password:raspberry) #this is example of how to use IP address
 - on Terminal: `cd /Documents/RPi_Cam_Web_Interface` 
 - `./start.sh` on one computer `./update.sh` might be needed beforehand
 - navigate to browser entering ip address
@@ -26,7 +33,7 @@ Key steps were:
 
 
 06.08.21
-## testing presence of rtc on pi
+## testing presence of rtc (real time clock) on pi
 
 - timedatectl (will give error if rtc is not equipped)
 - useful link for setting RTC time on pi (https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)
