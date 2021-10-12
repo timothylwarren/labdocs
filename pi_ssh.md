@@ -50,8 +50,8 @@ Key steps were:
 	
 -useful link (http://www.intellamech.com/RaspberryPi-projects/rpi_RTCds3231#4) 
 
+10.11.21
 ## Need to Update for setting time
-
 
 #set to Oregon time zone
 #click tab for advanced settings - Pacific new time
@@ -84,12 +84,25 @@ Set up another virtual environment, wind_env, on lab laptop
 -Created wind_sensor_env directory and then from within that directory 'python3 -m venv wind_env' ,'
 then 'source wind_env/bin/activate'
 
+10.12.21
+ 'python3' #to start python within the environment
+ 
 When activated `which python3` should point to location in virtual environment directory, not general python location
 
 Sudo privileges *should not* be necessary for installations within virtual environment
 
-## Permissions for reading usb file
+## Permissions for reading usb file # do not do this within a virtual environment -- open new terminal
 sudo chmod 777 '/dev/ttyACM0'
+
+# to start wind sensor logger
+# open directories for repositories and wind_sensor_env
+'source wind_env/bin/activate' #opens open virtual environment
+#using code from https://github.com/willdickson/m1_wind_sensor
+'from m1_wind_sensor import M1Logger'
+'logger = M1Logger(port='/dev/ttyACM0', filename='my_data.txt', window_size=120.0)'
+'logger.run()'
+#to stop logger 'Ctl c'
+'quit()' #to quit python3
 
 
 ## How to set up Python3 on new linux machine
