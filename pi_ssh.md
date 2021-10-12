@@ -102,7 +102,8 @@ sudo chmod 777 '/dev/ttyACM0'
 'logger = M1Logger(port='/dev/ttyACM0', filename='my_data.txt', window_size=120.0)'
 'logger.run()'
 #to stop logger 'Ctl c'
-'quit()' #to quit python3
+'quit()' 
+'deactivate' #to quit python3
 
 
 ## How to set up Python3 on new linux machine
