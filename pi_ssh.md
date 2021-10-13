@@ -58,15 +58,20 @@ Key steps were:
 #check this useful link (https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
 #check this useful link (https://forums.raspberrypi.com/viewtopic.php?t=101267)
 - sudo raspi-config
+- sudo nano /boot/config.txt (add 'dtoverlay=i2c-rtc,ds3231' to end of the file)
 - sudo reboot
+#log in again (ssh pi@10.42.0.###)
 - sudo apt-get install -y i2c-tools 
-#maybe you don't have to run these three commands
-- sudo apt-get -y remove fake-hwclock
-- sudo update-rc.d -f fake-hwclock remove
-- sudo systemctl disable fake-hwclock
 
-- sudo nano /lib/udev/hwclock-set
-- sudo hwclock -r 
+###- sudo apt-get -y remove fake-hwclock
+###- sudo update-rc.d -f fake-hwclock remove
+###- sudo systemctl disable fake-hwclock
+- timedatectl #check that local time is correct
+- date #check time that RTC time to write into pi is correct
+###- sudo nano /lib/udev/hwclock-set
+- sudo hwclock -r #read hardwire clock on pi
+- sudo hwclock -w #write new time onto hardwire clock on pi
+- sudo hwclock -r #check that time is now correct
 #enter password for pi
 
 sudo nano /lib/udev/hwclock-set
