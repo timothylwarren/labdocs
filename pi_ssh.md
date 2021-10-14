@@ -57,6 +57,12 @@ Key steps were:
 #click tab for advanced settings - Pacific new time
 #check this useful link (https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
 #check this useful link (https://forums.raspberrypi.com/viewtopic.php?t=101267)
+
+###alternative method to set time zone
+- sudo timedatectl set-timezone US/Pacific-New
+#list of available time zones 
+- timedatectl list-timezones #shows 1 time zone per line, scroll to find best fit
+
 - sudo raspi-config
 - sudo nano /boot/config.txt (add 'dtoverlay=i2c-rtc,ds3231' to end of the file)
 - sudo reboot
@@ -79,8 +85,14 @@ Key steps were:
 - sudo hwclock -w #write new time onto hardwire clock on pi
 - sudo hwclock -r #check that time is now correct
 #enter password for pi
-
 sudo nano /lib/udev/hwclock-set
+
+###manually setting clock time (refer https://www.freedesktop.org/software/systemd/man/timedatectl.html)
+- sudo timedatectl set-local-rtc 0 
+- sudo timedatectl set-time '2021-10-14 13:32:00' #use next full minute time and enter when clock on computer changes to set time within ~1 sec of real time)
+#confirm time and date are correct using 
+- timedatectl
+
 
 ## Starting virtual env for running python
 - we followed this link (https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
