@@ -60,13 +60,14 @@ Key steps were:
 - sudo raspi-config
 - sudo nano /boot/config.txt (add 'dtoverlay=i2c-rtc,ds3231' to end of the file)
 - sudo reboot
-#log in again ('nw-connection-editor', and then 'ssh pi@10.42.0.###')
+#log in again ('nm-connection-editor', and then 'ssh pi@10.42.0.###')
 - sudo service ntp stop
 - sudo ntpd -gq
 - sudo service ntp start
 
 - sudo apt-get update
 - sudo apt-get install i2c-tools 
+- sudo apt-get install python-smbus i2c-tools
 
 ###- sudo apt-get -y remove fake-hwclock
 ###- sudo update-rc.d -f fake-hwclock remove
