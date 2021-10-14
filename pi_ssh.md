@@ -138,4 +138,5 @@ https://docs.python-guide.org/starting/install3/linux/
 -`sudo apt-get install python3.6`
 -`pip install ipython` installs newest ipython that can be run with `ipython3` command
 
+# How to install Sublime (https://linuxize.com/post/how-to-install-sublime-text-3-on-ubuntu-20-04/)
 
