@@ -72,7 +72,7 @@ Key steps were:
 - sudo service ntp start
 
 - sudo apt-get update
-- sudo apt-get install i2c-tools 
+- sudo apt-get install i2c-tools #may need to add '--fix-missing' to command
 - sudo apt-get install python-smbus i2c-tools
 
 ###- sudo apt-get -y remove fake-hwclock
