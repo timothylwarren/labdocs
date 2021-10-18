@@ -94,7 +94,7 @@ sudo nano /lib/udev/hwclock-set
 - timedatectl
 
 #if error message "Failed to set time: Automatic time synchronization is enabled"
-- 'sudo timedatectl set-ntp 0'
+- sudo timedatectl set-ntp 0 
 #then redo steps above to reset clock manually
 
 ## Starting virtual env for running python
