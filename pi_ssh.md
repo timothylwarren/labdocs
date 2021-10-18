@@ -93,6 +93,9 @@ sudo nano /lib/udev/hwclock-set
 #confirm time and date are correct using 
 - timedatectl
 
+#if error message "Failed to set time: Automatic time synchronization is enabled"
+- 'sudo timedatectl set-ntp 0'
+#then redo steps above to reset clock manually
 
 ## Starting virtual env for running python
 - we followed this link (https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
