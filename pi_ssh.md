@@ -58,6 +58,12 @@ Key steps were:
 #check this useful link (https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
 #check this useful link (https://forums.raspberrypi.com/viewtopic.php?t=101267)
 
+
+#enabling RTC (see https://raspberrytips.com/time-sync-raspberry-pi/)
+- sudo apt install ntp
+- sudo apt install ntpdate
+- sudo timedatectl set-ntp true
+
 ###alternative method to set time zone
 - sudo timedatectl set-timezone US/Pacific-New
 #list of available time zones 
