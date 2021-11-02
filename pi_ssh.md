@@ -152,7 +152,7 @@ https://docs.python-guide.org/starting/install3/linux/
 ## how to mount remote file system on local machine
 
 - Make directory on local machine for mount `mkdir ~/mnt`
-- sshfs <username>@xx.yy.zz.zz:/home/mnt /home/remote_machine_path
+- Run sshfs command with username, ip address of remote machine and path on remote file system to directory to mount `sshfs <username>@xx.yy.zz.zz:/home/mnt /home/remote_machine_path`
 	
 	
 
