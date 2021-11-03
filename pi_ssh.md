@@ -151,8 +151,14 @@ https://docs.python-guide.org/starting/install3/linux/
 
 ## how to mount remote file system on local machine
 
-- Make empty directory on local machine to mount `mkdir ~/mnt`
-- Run sshfs command with username, ip address of remote machine and path on remote file system to directory to mount `sshfs <username>@xx.yy.zz.zz:/home/flyranch/remote_machine_path /home/flyranch/mnt`
+- Make empty directory on local machine `mkdir ~/mnt`. This is mount point
+- Run sshfs on local machine command with username, ip address of remote machine and path on remote file system to directory to mount `sshfs <username>@xx.yy.zz.zz:/home/flyranch/remote_directory /home/flyranch/mnt`
+
+## How to copy files off pi onto computer using command line '
+to copy to folder test_data
+`mkdir test_data`
+`cd test_data'
+`scp pi@xx.yy.zz:/var/www/html/media/*_2021<date> .`
 	
 	
 
