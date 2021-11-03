@@ -156,9 +156,9 @@ https://docs.python-guide.org/starting/install3/linux/
 
 ## How to copy files off pi onto computer using command line '
 to copy to folder test_data
-`mkdir test_data`
-`cd test_data'
-`scp pi@xx.yy.zz:/var/www/html/media/*_2021<date> .`
+- `mkdir test_data`
+- `cd test_data'
+- `scp pi@xx.yy.zz:/var/www/html/media/*_2021<date> .`
 	
 	
 
