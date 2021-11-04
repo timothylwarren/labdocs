@@ -159,6 +159,9 @@ to copy to folder test_data
 - `mkdir test_data`
 - `cd test_data`
 - `scp pi@xx.yy.zz:/var/www/html/media/*_2021<date> .`
-	
+
+## making video from jpg files.
+10 frames per second
+ffmpeg -framerate 10 -pattern_type glob -i "*.jpg" -vb 20M output_10.avi
 	
 
