@@ -199,10 +199,8 @@ network={
 ```
 
 
-2 - Edit the "/etc/network/interfaces"
-----------------------------------
-# interfaces(5) file used by ifup(8) and ifdown(8)
-# Include files from /etc/network/interfaces.d:
+- Edit the "/etc/network/interfaces"
+```
 
 auto lo
 
@@ -215,17 +213,17 @@ iface wlan0 inet dhcp
         pre-up wpa_supplicant -B -Dwext -i wlan0 -c/etc/wpa_supplicant/wpa_supp>
         post-down killall -q wpa_supplicant
 
+```
 
-
-3 - Encrypt the password using:
+- Encrypt the password using:
 ----------------------------------
-Note: To encrypt password use:
+```
 
-	echo -n 'password_in_plaintext' | iconv -t utf161e | openssl md4 > hash.txt
+	echo -n password_in_plain_text | iconv -t utf16le | openssl md4
         
         sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
-echo -n password_in_plain_text | iconv -t utf16le | openssl md4
+```
         
 
 
