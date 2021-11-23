@@ -163,5 +163,73 @@ to copy to folder test_data
 ## making video from jpg files.
 10 frames per second
 ffmpeg -framerate 10 -pattern_type glob -i "*.jpg" -vb 20M output_10.avi
+
+## Connecting pis to eduroam wifi
+ 
+ - Edit the "wpa_supplicant" file with:
+
+ `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+
+``
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+ctrl_interface_group=root
+ap_scan=1
+eapol_version=2
+update_config=0
+
+network={
+        disabled=0
+        auth_alg=OPEN
+        ssid="eduroam"
+        scan_ssid=1
+        key_mgmt=WPA-EAP
+        proto=WPA RSN
+        pairwise=CCMP TKIP
+        eap=PEAP
+        identity="USERNAME@oregonstate.edu"
+        anonymous_identity="USERNAME@oregonstate.edu"
+        password=hash:<ENCRYPTED-PASSWORD>
+        phase1="peaplabel=0"
+        phase2="auth=MSCHAPV2"
+}
+
+
+``
+
+
+2 - Edit the "/etc/network/interfaces"
+----------------------------------
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+
+iface wlan0 inet dhcp
+        pre-up wpa_supplicant -B -Dwext -i wlan0 -c/etc/wpa_supplicant/wpa_supp>
+        post-down killall -q wpa_supplicant
+
+
+
+3 - Encrypt the password using:
+----------------------------------
+Note: To encrypt password use:
+
+	echo -n 'password_in_plaintext' | iconv -t utf161e | openssl md4 > hash.txt
+        
+        sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+echo -n password_in_plain_text | iconv -t utf16le | openssl md4
+        
+
+
+
+
 	
 
