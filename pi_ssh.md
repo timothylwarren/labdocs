@@ -170,7 +170,7 @@ ffmpeg -framerate 10 -pattern_type glob -i "*.jpg" -vb 20M output_10.avi
 
  `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
 
-``
+```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 country=US
@@ -196,7 +196,7 @@ network={
 }
 
 
-``
+```
 
 
 2 - Edit the "/etc/network/interfaces"
