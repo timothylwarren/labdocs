@@ -33,7 +33,7 @@ Key steps were:
 
 
 06.08.21
-## testing presence of rtc (real time clock) on pi
+## testing presence of rtc (real time clock) on pi. 
 
 - timedatectl #(will give error if rtc is not equipped)
 - useful link for setting RTC time on pi (https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)
